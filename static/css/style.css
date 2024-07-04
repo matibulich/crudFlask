@@ -1,0 +1,723 @@
+/* Declaración de variables */
+:root {
+    --first-color: rgb(2, 94, 2);
+    --second-color: white;
+    --third-color: black;
+    --link-color: black;
+    --shadow-color: black;
+    --bg-color-first: lightgray;
+    --bg-color-second: white;
+    --bg-color-hover: green;
+    --color-font-hover: white;
+    --color-link-hover: green;
+}
+
+/* Fin declaración de variables */
+
+/* Seteo por default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+body {
+    background-color: var(--bg-color-first);
+}
+
+/* Fin default */
+
+/* Font Families */
+
+.inconsolata {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.tac-one-regular {
+    font-family: "Tac One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Fin Font Families */
+
+/* NavBar */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+    /* margin-top: 3vh; */
+    padding: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+li {
+    font-size: 22px;
+    font-weight: bold;
+    align-items: center;
+}
+
+a {
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--link-color);
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+#login {
+    border: 1px solid var(--first-color);
+    padding: 10px 30px;
+    color: var(--third-color);
+    margin: 0 20px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+#login:hover {
+    color: white;
+    background-color: var(--bg-color-hover);
+}
+
+.logo {
+    display: flex;
+
+}
+
+span {
+    font-size: 2rem;
+    padding: 0 10px;
+}
+
+span:hover {
+    color: var(--color-link-hover);
+}
+
+/* Fin NavBar */
+
+/* Banner */
+
+button {
+    border: none;
+    background-color: var(--bg-color-second);
+    color: var(--first-color);
+    cursor: pointer;
+    font-family: "Tac One", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px;
+    padding: 10px;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    will-change: transform;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: var(--color-font-hover);
+    background-color: var(--bg-color-hover);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+h1 {
+
+    font-size: 6vw;
+    font-family: "Tac One", sans-serif;
+    color: var(--second-color);
+    text-shadow: 10px 5px 10px var(--shadow-color);
+}
+
+h2 {
+
+    font-size: 2vw;
+    font-family: "Tac One", sans-serif;
+    color: var(--third-color);
+
+}
+
+.banner {
+    background-image: url(/static/img/banner2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Fin Banner */
+
+/* Info del complejo */
+
+h3 {
+    font-size: 1.5vw;
+    font-family: "Tac One", sans-serif;
+    color: var(--second-color)
+}
+
+.container-logo img {
+    width: 13vh
+}
+
+
+.logo-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.complejo-container {
+    background-color: var(--third-color);
+    max-width: 95vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto;
+    padding: 10px;
+    row-gap: 1%;
+
+
+}
+
+.complejo_img1,
+.complejo_img2,
+.complejo_img3 {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.complejo_texto {
+    font-size: 20px;
+    color: white;
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+    min-height: 100%;
+
+    p {
+        font-size: 2rem;
+        font-family: "Inconsolata", monospace;
+
+    }
+
+}
+
+.complejo_h3 {
+    grid-column: 1 / 4;
+    margin: 0 auto;
+}
+
+/* Fin info del complejo */
+
+/* Estilos para servicios */
+
+
+
+.servicios-container{
+    background-color: var(--first-color);
+    max-width: 95vw;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto;
+    padding: 10px; 
+    
+       
+}
+
+.cards_servicios {
+    background-color: var(--third-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    
+}
+
+.cards_servicios ul {
+    justify-content: flex-start;
+    display: block;
+}
+
+.cards_servicios li {
+    color: white;
+    font-size: 18px;
+    list-style-type: ' ⚽ ';
+}
+
+.modal_reserva{  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    button{
+        background-color: green;
+        color: white;
+    }
+
+    }
+
+.modal_reserva::backdrop{
+    background-color: rgba(0,0,0,.65);
+}
+
+ /* Fin estilos servicios */
+
+
+ /* Estilos Iniciar Sesion */
+ .complejo-container-sesion{
+    background-color: var(--third-color);
+    max-width: 95vw;
+    margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    padding:10px;
+   
+ }
+ .complejo-sesion{
+ 
+    background-color: var(--fourth-color);
+    padding: 1rem;
+    width: 50%;
+    margin: 10px auto;
+  
+   
+ }
+
+
+ span.registrarme{
+    color: aqua;
+ }
+
+ span.registrarme:hover{
+    color: rgb(197, 120, 5);
+ }
+
+/* Estilos para el form de registro */
+.container_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 41%)), url(/static/img/soccer-grass.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 95vw;
+    margin: 10px auto;
+}
+
+.form_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 8px auto;
+}
+
+label {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    grid-column-start: 1;
+}
+
+select { font-size: 15px;}
+
+input[type="text"],
+input[type="mail"],
+input[type="password"],
+input[type="date"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    grid-column: 1 / -1;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"] {
+    width: 100%;
+    border: none;
+    background-color: var(--bg-color-second);
+    color: var(--first-color);
+    cursor: pointer;
+    font-family: "Tac One", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    border-radius: 4px; 
+}
+
+.cont-check{
+    font-size: 16px;
+    color: var(--first-color);
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.label-TyC{
+    font-size: 1.2rem;
+    padding-left: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+select{
+    height: 30px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.767);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    color: var(--color-font-hover);
+    background-color: var(--bg-color-hover);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.error {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: rgb(230, 39, 39);
+    font-size: 14px;
+    position: relative;
+    bottom: 10px;
+}
+
+/* Fin estilos form de registro */
+
+/* Estilos para el footer */
+
+.container-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: var(--second-color);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+        "map contacto"
+        "derechos derechos";
+}
+
+.map {
+    grid-area: map;
+    box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.4);
+
+}
+
+.contacto {
+    grid-area: contacto;
+}
+
+.derechos {
+    grid-area: derechos;
+}
+
+.derechos p {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.cont-icon-rrss {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+
+svg {
+    width: 30px;
+    margin: 0;
+}
+
+.ubicacion {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.icon-ubicacion {
+    width: 20px;
+}
+
+.cont-ubicacion {
+    display: grid;
+    padding: 10px 0;
+}
+
+.newsletter {
+    width: 300px;
+    height: 30px;
+    font-size: 1.5rem;
+}
+
+.newsletter-boton {
+    width: 100px;
+    height: 30px;
+    font-size: 1.5rem;
+}
+
+.link-rrss {
+    padding: 0;
+}
+
+
+/* Estilos TABLA */
+
+thead{
+    font-size: 6rem;
+}
+tbody{
+    font-size: 6rem;
+}
+/* Fin estilos footer */
+
+/* Estilos panel administrador*/
+
+.complejo-container-admin{
+    background-color: var(--third-color);
+    max-width: 80vw;
+    margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    padding:10px;
+
+    & button{
+        margin:5px
+    }
+  
+ }
+
+ .complejo-container-usuario{
+    background-color: var(--third-color);
+    max-width: 80vw;
+    margin: 0 auto 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px;
+
+    h2{
+        color: white;
+    }
+  }
+
+  .usuario-vista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+    color: white;
+}
+
+.usuario-detalle {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 8px 0;
+    padding: 0 15px; /* Espacio horizontal */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.detalle-titulo {
+    font-weight: bold;
+    min-width: 100px; 
+    text-align: left; 
+    
+    border: solid 1px green ;
+}
+
+.detalle-valor {
+    text-align: left; /* Alinea el texto a la izquierda */
+    flex-grow: 1; /* Permite que el valor se expanda según sea necesario */
+    word-wrap: break-word; /* Permite que el contenido largo se ajuste */
+}
+
+img#imagenUsuario {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 50%; 
+    width: 150px;
+    height: 150px;
+    object-fit: cover; }
+
+h2#nombreUsuario {
+    margin-bottom: 15px;
+    text-align: center; /* Alinea el nombre en el centro */
+}
+
+/* media queries*/
+
+@media all and (max-width: 600px) {
+    h1 {
+        font-size: 6vh
+    }
+
+    h2 {
+        font-size: 4vh;
+    }
+
+    h3 {
+        font-size: 2vh
+    }
+
+
+    /* Deberia ser un slice de imagenes, por el momento lo dejamos asi.*/
+
+    .complejo_img1,
+    .complejo_img2,
+    .complejo_img3,
+    .cards_servicios,
+    .complejo_texto 
+    {
+
+
+        grid-column: 1 / -1;
+
+
+    }
+
+    /* Footer */
+
+   .container-footer{
+    grid-template-areas: 
+    "map"
+    "contacto"
+    "derechos"
+    ;
+    }
+
+    .map{
+        margin-bottom: 20px;
+        width: 80%;
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    .contacto{
+        width: 80%;
+    }
+    
+    .derechos{
+        padding: 10px;
+    }
+
+    .derechos p{
+        text-align: center;
+    }
+
+    .label-TyC{
+        color: white;
+    }
+   }
+  
+
+   
+
+   
+
+
+
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 8vh
+    }
+
+    h2 {
+        font-size: 5vh;
+    }
+
+    .container-footer{
+        grid-template-areas: 
+        "map"
+        "contacto"
+        "derechos"
+        ;
+       }
+    
+    .map{
+        margin-bottom: 20px;
+    }   
+
+    .derechos{
+        padding: 15px;
+    }
+
+    .derechos p{
+        text-align: center;
+    }
+}
